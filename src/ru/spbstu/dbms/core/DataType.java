@@ -1,4 +1,4 @@
-package ru.spbstu.dbms;
+package ru.spbstu.dbms.core;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,4 +8,4 @@ package ru.spbstu.dbms;
  * To change this template use File | Settings | File Templates.
  */
 
-enum DataType {STRING, INTEGER, FLOAT}
+public enum DataType {STRING, INTEGER, FLOAT}

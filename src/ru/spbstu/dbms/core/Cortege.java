@@ -1,4 +1,4 @@
-package ru.spbstu.dbms;
+package ru.spbstu.dbms.core;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,17 +10,17 @@ import java.util.Map;
  * Time: 17:25
  * To change this template use File | Settings | File Templates.
  */
-public class Cortege {
-    public Map<String, String> getCourtage() {
-        return courtage;
-    }
+class Cortege {
+
+    private final Map<String, String> cortege = new HashMap<String, String>();
+    private Integer internalID;
 
     /**
      * <p>Добавляет атрибут в кортеж</p>
      * @param name Имя атрибута
      */
     public void addAttribute(String name) {
-        courtage.put(name, null);
+        cortege.put(name, null);
     }
 
     /**
@@ -28,11 +28,12 @@ public class Cortege {
      * @param name Имя атрибута
      */
     public void removeAttribute(String name) {
-        courtage.remove(name);
+        cortege.remove(name);
     }
 
-    /**
-     * ЫЫЫЫЫыыыы!
-     */
-    private final Map<String, String> courtage = new HashMap<String, String>();
+    /*--------GETTERS------------------------------------------------------------------------------------*/
+
+    public Map<String, String> getCortege() {
+        return cortege;
+    }
 }
