@@ -8,5 +8,5 @@ package ru.spbstu.dbms.query;
  * To change this template use File | Settings | File Templates.
  */
 public enum QueryType {
-
+    SELECT, UPDATE, DELETE, INSERT
 }
