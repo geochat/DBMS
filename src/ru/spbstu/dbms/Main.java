@@ -10,8 +10,7 @@ public class Main
 	 */
 	public static void main(String[] args)
 	{
-        WhereOp op = WhereOp.EQUALS;
-        op = WhereOp.LESS;
+        System.out.print("ololo@!!!@");
 	}
 
 }
