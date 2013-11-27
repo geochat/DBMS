@@ -4,11 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
+ * Класс кортежа в таблице
  * User: Zeelony
  * Date: 21.11.13
  * Time: 17:25
- * To change this template use File | Settings | File Templates.
  */
 class Cortege {
 

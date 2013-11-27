@@ -1,48 +1,32 @@
 package ru.spbstu.dbms.core;
 
-import java.util.Map;
 import java.util.HashMap;
 
 /**
- * Created with IntelliJ IDEA.
+ * Класс ядра СУБД.
  * User: Zeelony
- * Date: 21.11.13
- * Time: 19:20
- * To change this template use File | Settings | File Templates.
+ * Date: 27.11.13
+ * Time: 16:05
  */
 public class Core {
-    /**
-     * singleton instance
-     */
-    private static volatile Core instance;
+    private static Core ourInstance = new Core();
 
-    /**
-     * Геттер синглтон инстанса
-     * @return инстанс Core
-     */
     public static Core getInstance() {
-        Core localInstance = instance;
-        if (localInstance == null) {
-            synchronized (Core.class) {
-                localInstance = instance;
-                if (localInstance == null) {
-                    instance = localInstance = new Core();
-                }
-            }
-        }
-        return localInstance;
+        return ourInstance;
+    }
+
+    private Core() {
     }
 
     /**
      * HashMap баз данных в форме имя:база
      */
-    HashMap<String,Database>databases = new HashMap<String,Database>();
+    HashMap<String,Database> databases = new HashMap<String,Database>();
 
     /*--------GETTERS------------------------------------------------------------------------------------*/
 
-    public Map<String, Database> getDatabases() {
+    public HashMap<String, Database> getDatabases() {
         return databases;
     }
-
 
 }
